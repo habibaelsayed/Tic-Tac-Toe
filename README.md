@@ -19,3 +19,8 @@
 ![image](https://github.com/habibaelsayed/Tic-Tac-Toe/assets/76976297/752b9c98-1c58-44c9-b80f-f6481be99b24)
 
 
+### To open this project:
+1. Restore the database
+2. In Visual Studio Open project then Tools -> NuGet Package Manager -> Manage Package Manager for Solution
+3. In NuGet Solution Choose Browse -> Search for (Microsoft.Data.SqlClient) -> then install
+4. Now Run the Project
