@@ -41,6 +41,7 @@
             radio_p2o = new RadioButton();
             radio_p2x = new RadioButton();
             pictureBox1 = new PictureBox();
+            btn_about = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -51,7 +52,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(262, 30);
+            label1.Location = new Point(270, 20);
             label1.Name = "label1";
             label1.Size = new Size(303, 28);
             label1.TabIndex = 0;
@@ -112,9 +113,9 @@
             panel1.Controls.Add(radio_p1x);
             panel1.Controls.Add(txt_firstname);
             panel1.Controls.Add(lbl_firstname);
-            panel1.Location = new Point(25, 222);
+            panel1.Location = new Point(24, 232);
             panel1.Name = "panel1";
-            panel1.Size = new Size(277, 167);
+            panel1.Size = new Size(277, 135);
             panel1.TabIndex = 6;
             // 
             // radio_p1o
@@ -151,9 +152,9 @@
             panel2.Controls.Add(radio_p2x);
             panel2.Controls.Add(txt_secondname);
             panel2.Controls.Add(lbl_secondname);
-            panel2.Location = new Point(543, 101);
+            panel2.Location = new Point(542, 92);
             panel2.Name = "panel2";
-            panel2.Size = new Size(277, 167);
+            panel2.Size = new Size(277, 135);
             panel2.TabIndex = 7;
             // 
             // radio_p2o
@@ -187,18 +188,32 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.xo;
-            pictureBox1.Location = new Point(330, 149);
+            pictureBox1.Location = new Point(333, 135);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(185, 158);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
+            // btn_about
+            // 
+            btn_about.BackColor = Color.Silver;
+            btn_about.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_about.ForeColor = SystemColors.ButtonHighlight;
+            btn_about.Location = new Point(24, 20);
+            btn_about.Name = "btn_about";
+            btn_about.Size = new Size(121, 39);
+            btn_about.TabIndex = 9;
+            btn_about.Text = "How to play";
+            btn_about.UseVisualStyleBackColor = false;
+            btn_about.Click += btn_about_Click;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.CadetBlue;
+            BackColor = Color.DarkSlateGray;
+            Controls.Add(btn_about);
             Controls.Add(pictureBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -230,5 +245,6 @@
         private RadioButton radio_p2o;
         private RadioButton radio_p2x;
         private PictureBox pictureBox1;
+        private Button btn_about;
     }
 }

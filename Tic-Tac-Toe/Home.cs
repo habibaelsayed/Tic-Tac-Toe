@@ -12,7 +12,8 @@ namespace Tic_Tac_Toe
 {
     public partial class Home : UserControl
     {
-        public event EventHandler<EventArgs> ButtonClick;
+        public event EventHandler<EventArgs> StartButtonClick;
+        public event EventHandler<EventArgs> AboutButtonClick;
         public Home()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Tic_Tac_Toe
 
         private void btn_start_Click(object sender, EventArgs e)
         {
-            ButtonClick?.Invoke(this, EventArgs.Empty);
+            StartButtonClick?.Invoke(this, EventArgs.Empty);
 
         }
 
@@ -56,6 +57,11 @@ namespace Tic_Tac_Toe
             }
         }
 
+        private void btn_about_Click(object sender, EventArgs e)
+        {
+            AboutButtonClick?.Invoke(this, EventArgs.Empty);
+        }
+
         public string Txt_firstname
         {
             set { txt_firstname.Text = value; }
@@ -70,25 +76,25 @@ namespace Tic_Tac_Toe
 
         public bool Radio_p1x
         {
-            set { radio_p1x.Checked= value; }
+            set { radio_p1x.Checked = value; }
             get { return radio_p1x.Checked; }
         }
 
         public bool Radio_p1o
         {
-            set { radio_p1o.Checked= value; }
+            set { radio_p1o.Checked = value; }
             get { return radio_p1o.Checked; }
         }
 
         public bool Radio_p2x
         {
-            set { radio_p2x.Checked= value; }
+            set { radio_p2x.Checked = value; }
             get { return radio_p2x.Checked; }
         }
 
         public bool Radio_p2o
         {
-            set { radio_p2o.Checked= value; }
+            set { radio_p2o.Checked = value; }
             get { return radio_p2o.Checked; }
         }
 

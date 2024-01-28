@@ -328,7 +328,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.CadetBlue;
+            BackColor = Color.DarkSlateGray;
             BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(panel3);
             Controls.Add(panel2);

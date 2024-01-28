@@ -92,6 +92,7 @@ namespace Tic_Tac_Toe
             home2.Visible = true;
             game2.Visible = false;
             database1.Visible = false;
+            about1.Visible = false;
             home2.Txt_firstname = "";
             home2.Txt_secondname = "";
             home2.Radio_p1o = false;
@@ -110,14 +111,27 @@ namespace Tic_Tac_Toe
         {
             NewGame();
         }
+
+        private void btn_about_click(object sender, EventArgs e)
+        {
+            NewGame();
+        }
+
+        private void btn_about_page_click(object sender, EventArgs e)
+        {
+            about1.Visible = true;
+            home2.Visible=false;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
             NewGame();
-            home2.ButtonClick += home2_btnClicked;
+            about1.ButtonClick += btn_about_click;
+            home2.StartButtonClick += home2_btnClicked;
             game2.ButtonClick += game2_btn_save_click;
             database1.DeleteButtonClick += btn_delete_row;
             database1.NewButtonClick += btn_new_game_click;
+            home2.AboutButtonClick += btn_about_page_click;
         }
 
         
